@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alsahir Ali Alqarni | Cybersecurity Student</title>
+    <meta name="description" content="Online resume and portfolio of Alsahir Ali Alqarni, a cybersecurity student interested in network security.">
+
+    <!-- Bootstrap CSS (Bonus) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="cssweb.css" />
+
+    <!-- External JavaScript (Assignment 2) -->
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <!-- Accessibility: skip link -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- HEADER -->
+    <header class="top-header">
+        <div class="wrapper header-flex">
+            <div class="identity">
+                <img src="images/profile.jpg" alt="Cybersecurity themed profile for Alsahir Ali Alqarni" class="profile-img" />
+                <div class="identity-text">
+                    <p class="role">Cybersecurity Student</p>
+                    <h1 class="name">Alsahir Ali Alqarni</h1>
+                    <p class="intro">
+                        I am a Bachelor of Cybersecurity student at the University of Jeddah,
+                        interested in network security and building a strong future in the field.
+                    </p>
+                </div>
+            </div>
+
+            <!-- BOOTSTRAP NAVBAR (Bonus Component) -->
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <div class="container-fluid">
+
+                    <a class="navbar-brand" href="#about">Alsahir</a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNavbar">
+                        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#api-lab">API Lab</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- END NAVBAR -->
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- ABOUT -->
+        <section id="about" class="section">
+            <div class="wrapper about-grid">
+                <div>
+                    <h2>About Me</h2>
+                    <p>
+                        I chose cybersecurity because I found my interest in protecting systems
+                        and information from attacks. I enjoy understanding how networks work and
+                        how they can be secured against different threats.
+                    </p>
+                    <p>
+                        My main focus right now is <strong>network security</strong>. I want to
+                        keep improving my technical skills and learn how to design, monitor, and
+                        defend secure networks.
+                    </p>
+                    <p>
+                        My career goal is to work in a decent company where I can earn a good
+                        salary, grow to a high rank, and contribute to keeping organizations safe.
+                    </p>
+                </div>
+
+                <aside class="quick-facts" aria-label="Quick information about Alsahir">
+                    <h3>Quick Facts</h3>
+                    <dl>
+                        <div class="fact">
+                            <dt>Location</dt>
+                            <dd>Jeddah, Saudi Arabia</dd>
+                        </div>
+                        <div class="fact">
+                            <dt>Field</dt>
+                            <dd>Cybersecurity (Network Security)</dd>
+                        </div>
+                        <div class="fact">
+                            <dt>Favorite Colors</dt>
+                            <dd>White &amp; Light Blue</dd>
+                        </div>
+                        <div class="fact">
+                            <dt>Email</dt>
+                            <dd><a href="mailto:AssaherAli73@gmail.com">AssaherAli73@gmail.com</a></dd>
+                        </div>
+                        <div class="fact">
+                            <dt>Phone</dt>
+                            <dd>0560280236</dd>
+                        </div>
+                    </dl>
+                </aside>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education" class="section section-alt">
+            <div class="wrapper">
+                <h2>Education</h2>
+
+                <article class="edu-item">
+                    <h3>Bachelor of Cybersecurity</h3>
+                    <p class="edu-meta">University of Jeddah · 2023 – 2027 (Expected)</p>
+                    <p>
+                        Studying core topics such as network security, operating systems,
+                        programming, computer networks, and information security concepts.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section">
+            <div class="wrapper">
+                <h2>Projects</h2>
+                <p class="section-intro">
+                    These student-level cybersecurity projects reflect my current skills and
+                    interests. Each project helps me build a strong foundation in network
+                    security and security awareness.
+                </p>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Home Network Hardening Lab</h3>
+                        <p class="card-meta">Technology: VirtualBox, Linux, Router Configuration</p>
+                        <p>
+                            Built a small lab using virtual machines to simulate a home network.
+                            Configured a router firewall, changed default credentials, and disabled
+                            unnecessary services. Practiced securing Wi-Fi settings and tested open
+                            ports using basic scanning tools.
+                        </p>
+                        <p class="project-links">
+                            <a href="#">Documentation (coming soon)</a>
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Network Traffic Monitoring Exercise</h3>
+                        <p class="card-meta">Technology: Wireshark, Basic Packet Analysis</p>
+                        <p>
+                            Captured and analyzed network traffic to understand common protocols
+                            such as HTTP, DNS, and TCP. Practiced identifying suspicious patterns
+                            and learned how insecure protocols can expose sensitive information.
+                        </p>
+                        <p class="project-links">
+                            <a href="#">Lab Notes (coming soon)</a>
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Password Security Awareness Page</h3>
+                        <p class="card-meta">Technology: HTML5, CSS3</p>
+                        <p>
+                            Designed a simple web page that explains good password practices,
+                            such as using long passphrases, avoiding reuse, and enabling
+                            multi-factor authentication.
+                        </p>
+                        <p class="project-links">
+                            <a href="#">Demo (coming soon)</a>
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- API LAB -->
+        <section id="api-lab" class="section section-alt">
+            <div class="wrapper">
+                <h2>Security Training Users Lab (API Demo)</h2>
+                <p class="section-intro">
+                    This tool uses an external API to generate random user profiles.
+                </p>
+
+                <form id="userForm" class="api-form">
+                    <div class="api-form-row">
+                        <label for="count">Number of users (1–5)</label>
+                        <input id="count" name="count" type="number" min="1" max="5" value="3" required />
+                        <small id="countHelp" class="help-text">Users to fetch: 3</small>
+                    </div>
+
+                    <div class="api-form-row">
+                        <label for="gender">Gender (optional filter)</label>
+                        <select id="gender" name="gender">
+                            <option value="">Any</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="api-form-buttons">
+                        <button type="submit" id="fetchBtn">Get Users</button>
+                        <button type="button" id="clearBtn">Clear Results</button>
+                    </div>
+                </form>
+
+                <div id="apiMessage" class="api-message" role="status" aria-live="polite"></div>
+                <div id="usersContainer" class="api-results" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATES -->
+        <section id="certificates" class="section">
+            <div class="wrapper">
+                <h2>Certificates & Awards</h2>
+                <p>
+                    I currently do not hold any cybersecurity certifications yet.
+                </p>
+
+                <ul class="cert-list">
+                    <li class="cert-placeholder">
+                        This section will be updated as I earn certificates and awards.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section section-alt">
+            <div class="wrapper contact-grid">
+                <div>
+                    <h2>Contact Me</h2>
+                    <ul class="contact-info">
+                        <li><strong>Email:</strong> <a href="mailto:AssaherAli73@gmail.com">AssaherAli73@gmail.com</a></li>
+                        <li><strong>Phone:</strong> 0560280236</li>
+                        <li><strong>Location:</strong> Jeddah, Saudi Arabia</li>
+                    </ul>
+
+                    <div class="social">
+                        <h3>Social</h3>
+                        <a href="https://x.com/509_saher" target="_blank">X (Twitter): @509_saher</a>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="#" method="post">
+                    <h3>Send a Message</h3>
+
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required />
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required />
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrapper">
+            <p>&copy; 2025 Alsahir Ali Alqarni. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (Bonus Requirement) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+</body>
+</html>

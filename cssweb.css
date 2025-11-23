@@ -1,0 +1,574 @@
+/* ===========================
+   Base & Global Styles
+   =========================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-main: #f5f7fb;
+    --bg-alt: #ffffff;
+    --accent: #60a5fa;         /* light blue */
+    --accent-dark: #1d4ed8;
+    --text-main: #0f172a;
+    --text-muted: #6b7280;
+    --border-soft: #e5e7eb;
+    --shadow-soft: 0 2px 8px rgba(15, 23, 42, 0.08);
+    --radius-md: 0.75rem;
+    --radius-lg: 999px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--bg-main);
+}
+
+/* Layout helpers */
+
+.wrapper {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section {
+    padding: 3rem 0;
+}
+
+.section-alt {
+    background-color: var(--bg-alt);
+}
+
+/* ===========================
+   Skip Link (Accessibility)
+   =========================== */
+
+.skip-link {
+    position: absolute;
+    top: 0.5rem;
+    left: -999px;
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    left: 0.5rem;
+}
+
+/* ===========================
+   Header & Navigation
+   =========================== */
+
+.top-header {
+    background: radial-gradient(circle at top left, #bfdbfe, #0f172a);
+    color: #ffffff;
+    padding: 1rem 0 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.header-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.identity {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+}
+
+.identity-text .role {
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.identity-text .name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0.2rem 0;
+}
+
+.identity-text .intro {
+    font-size: 0.95rem;
+    max-width: 34rem;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ===========================
+   Typography
+   =========================== */
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+}
+
+p + p {
+    margin-top: 0.75rem;
+}
+
+.section-intro {
+    max-width: 36rem;
+    margin-bottom: 1.25rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ===========================
+   About Section
+   =========================== */
+
+.about-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.quick-facts {
+    background-color: var(--bg-alt);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.4rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.quick-facts h3 {
+    margin-bottom: 0.75rem;
+}
+
+.quick-facts dl {
+    display: grid;
+    gap: 0.7rem;
+}
+
+.fact dt {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+}
+
+.fact dd {
+    font-size: 0.95rem;
+}
+
+/* ===========================
+   Education
+   =========================== */
+
+.edu-item {
+    background-color: var(--bg-alt);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.4rem;
+    border-left: 4px solid var(--accent);
+    box-shadow: var(--shadow-soft);
+}
+
+.edu-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+}
+
+/* ===========================
+   Projects & Cards
+   =========================== */
+
+.card-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background-color: var(--bg-alt);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.4rem;
+    box-shadow: var(--shadow-soft);
+    border-top: 3px solid var(--accent);
+}
+
+.card-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.6rem;
+}
+
+.project-links a {
+    font-size: 0.9rem;
+    color: var(--accent-dark);
+    text-decoration: none;
+}
+
+.project-links a:hover,
+.project-links a:focus {
+    text-decoration: underline;
+}
+
+/* ===========================
+   Certificates
+   =========================== */
+
+.cert-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.cert-placeholder {
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1px dashed var(--border-soft);
+    color: var(--text-muted);
+    background-color: #f9fafb;
+}
+
+/* ===========================
+   Contact Section
+   =========================== */
+
+.contact-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.contact-info {
+    list-style: none;
+    padding-left: 0;
+    margin: 0.75rem 0 1rem;
+}
+
+.contact-info li + li {
+    margin-top: 0.3rem;
+}
+
+.social h3 {
+    margin-bottom: 0.3rem;
+}
+
+.social a {
+    display: inline-block;
+    margin-top: 0.25rem;
+    color: var(--accent-dark);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.social a:hover,
+.social a:focus {
+    text-decoration: underline;
+}
+
+/* Contact form */
+
+.contact-form {
+    background-color: var(--bg-alt);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1.4rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.contact-form h3 {
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-soft);
+    font: inherit;
+    margin-bottom: 0.8rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+    border-color: transparent;
+}
+
+.contact-form button {
+    display: inline-block;
+    padding: 0.55rem 1.4rem;
+    border-radius: var(--radius-lg);
+    border: none;
+    background-color: var(--accent-dark);
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+    background-color: #1e40af;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+
+.site-footer {
+    padding: 1rem 0;
+    background-color: #020617;
+    color: #e5e7eb;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* ===========================
+   API LAB (Assignment 2)
+   =========================== */
+
+/* Form styles */
+
+.api-form {
+    background-color: var(--bg-alt);
+    border-radius: var(--radius-md);
+    padding: 1.4rem 1.6rem;
+    box-shadow: var(--shadow-soft);
+    display: grid;
+    gap: 1rem;
+}
+
+.api-form-row {
+    display: grid;
+    gap: 0.3rem;
+}
+
+.api-form label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.api-form input,
+.api-form select {
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-soft);
+    font: inherit;
+}
+
+.api-form input:focus,
+.api-form select:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+    border-color: transparent;
+}
+
+.api-form-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.api-form button {
+    padding: 0.5rem 1.2rem;
+    border-radius: var(--radius-lg);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+#fetchBtn {
+    background-color: var(--accent-dark);
+    color: #ffffff;
+}
+
+#fetchBtn:hover,
+#fetchBtn:focus {
+    background-color: #1e40af;
+}
+
+#clearBtn {
+    background-color: #e5e7eb;
+    color: var(--text-main);
+}
+
+#clearBtn:hover,
+#clearBtn:focus {
+    background-color: #d1d5db;
+}
+
+.help-text {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Messages */
+
+.api-message {
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.api-message.error {
+    color: #b91c1c;
+}
+
+.api-message.info {
+    color: var(--accent-dark);
+}
+
+/* Results grid */
+
+.api-results {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1.2rem;
+}
+
+.api-card {
+    border-top-color: var(--accent);
+}
+
+.api-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.6rem;
+}
+
+.api-card-header img {
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    object-fit: cover;
+}
+
+.api-username {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.api-card-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.9rem;
+}
+
+.api-card-list li + li {
+    margin-top: 0.25rem;
+}
+
+/* ===========================
+   Responsive Breakpoints
+   =========================== */
+
+/* >= 576px */
+@media (min-width: 576px) {
+    .header-flex {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-nav ul {
+        justify-content: flex-end;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .api-results {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* >= 768px */
+@media (min-width: 768px) {
+    .section {
+        padding: 3.5rem 0;
+    }
+
+    .about-grid {
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+        align-items: flex-start;
+    }
+
+    .contact-grid {
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+        align-items: flex-start;
+    }
+}
+
+/* >= 992px */
+@media (min-width: 992px) {
+    .identity-text .name {
+        font-size: 1.9rem;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .api-results {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
